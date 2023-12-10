@@ -1,0 +1,11 @@
+// scss 變數宣告
+$--primary-100:#BF9D7D;
+
+* {
+  font-family: 'Noto Serif TC';
+}
+
+.btn-primary-100 {
+    background-color: $--primary-100;
+    border-radius: 8px;
+}
