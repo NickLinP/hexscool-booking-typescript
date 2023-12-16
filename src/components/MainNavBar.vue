@@ -21,13 +21,14 @@
   </nav>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 @import "@/assets/scss/global.scss";  
 @media (min-width: 1024px) {
   .outer-container {
     padding: 24px 80px;
     position: fixed;
     width: 100%;
+    z-index: 1;
 
     .btn-container {
       width: 355px;
