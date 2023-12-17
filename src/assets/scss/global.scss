@@ -1,19 +1,21 @@
 // scss 變數宣告
-$--primary-100:#BF9D7D;
-
+$--primary-100: #bf9d7d;
+$--Primary-40: #f1eae4;
+$--Primary-10: #f7f2ee;
+$--Neutral-80: #4b4b4b;
 * {
   font-family: 'Noto Serif TC';
 }
 
 .btn-primary-100 {
-    background-color: $--primary-100;
-    border-radius: 8px;
+  background-color: $--primary-100;
+  border-radius: 8px;
 }
 .text-primary-100 {
   color: $--primary-100;
 }
 
-@mixin customTextStyle($font-size, $line-height, $font-weight:400) {
+@mixin customTextStyle($font-size, $line-height, $font-weight: 400) {
   font-size: $font-size;
   line-height: $line-height;
   font-weight: $font-weight;
