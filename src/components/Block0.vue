@@ -1,41 +1,35 @@
 <script setup lang="ts">
-
+import Pagination from '../components/Pagination.vue'
 </script>
 
 <template>
-<div class="background-image position-relative">
-      <div class="inner-container position-absolute">
-        <div class="d-flex title-container">
-          <div class="title text-primary-100">
-            <div class="title-name">享樂酒店</div>
-            <div class="title-name-en">Enjoyment Luxury Hotel</div>
+  <div class="background-image position-relative">
+    <div class="inner-container position-absolute">
+      <div class="d-flex title-container">
+        <div class="title text-primary-100">
+          <div class="title-name">享樂酒店</div>
+          <div class="title-name-en">Enjoyment Luxury Hotel</div>
+          <div class="hr-line"></div>
+        </div>
+      </div>
+      <div class="description-outer-container">
+        <div class="description-container">
+          <p class="title">高雄</p>
+          <p class="title" style="margin-top: 8px">豪華住宿之選</p>
+          <p class="description">我們致力於為您提供無與倫比的奢華體驗與優質服務</p>
+          <div class="btn-booking d-flex justify-content-end align-items-center">
+            <p class="content">立即訂房</p>
             <div class="hr-line"></div>
           </div>
         </div>
-        <div class="description-outer-container">
-          <div class="description-container">
-            <p class="title">高雄</p>
-            <p class="title" style="margin-top: 8px">豪華住宿之選</p>
-            <p class="description">我們致力於為您提供無與倫比的奢華體驗與優質服務</p>
-            <div class="btn-booking d-flex justify-content-end align-items-center">
-              <p class="content">立即訂房</p>
-              <div class="hr-line"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pagination d-flex justify-content-between">
-        <div class="active"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
       </div>
     </div>
+
+    <Pagination />
+  </div>
 </template>
 
 <style lang="scss" scoped>
-
 @import '@/assets/scss/global.scss';
 @import '@/assets/scss/BootstrapReset.scss';
 @media screen and (min-width: 768px) {
@@ -120,28 +114,6 @@
       }
     }
   }
-  .pagination {
-    position: absolute;
-    left: 50%;
-    right:50px;
-    transform: translate(-50%, -50%);
-    bottom: 32px;
-    width: 220px;
-    .active {
-      cursor: pointer;
-      width: 60px;
-      height: 4px;
-      border-radius: 100px;
-      background-color: $--primary-100;
-    }
-    .item {
-      cursor: pointer;
-      width: 32px;
-      height: 4px;
-      border-radius: 100px;
-      background-color: #FFFFFF;
-    }
-  }
 }
 .background-image {
   width: 100%;
@@ -150,5 +122,4 @@
   background-position: center center;
   background-size: cover;
 }
-
 </style>

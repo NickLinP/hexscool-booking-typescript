@@ -1,9 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Pagination from '../components/Pagination.vue'
+</script>
 
 <template>
   <div class="outer-container position-relative d-flex justify-content-center">
-    <img class="img" src="/desktop/about.png" alt="" />
+    <div class="img position-absolute">
+      <img class="w-100 h-100 position-absolute" src="/desktop/room1.png" alt="" />
+      <Pagination />
+    </div>
 
+    <div>
+      <img class="line position-absolute" src="/desktop/line3.png" alt="" />
+      <img class="bg position-absolute" src="/desktop/bg.png" alt="" />
+      <div class="content-container position-absolute">
+        <p>尊爵雙人房</p>
+        <p>享受高級的住宿體驗，尊爵雙人房提供給您舒適寬敞的空間和精緻的裝潢。</p>
+        <p>NT$ 10,000</p>
+        <button></button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -15,22 +30,32 @@
     width: 100%;
     height: 1140px;
     .img {
-      margin-top: 120px;
+      top: 120px;
+      left: 0;
+      width: 900px;
+      height: 900px;
+      object-fit: cover;
+    }
+    .line {
+      top: 180px;
+      right: 0;
+      width: 1060px;
+      height: 187px;
+      object-fit: cover;
+    }
+    .bg {
+      right: 0;
+      bottom: 0;
       width: 100%;
-      height: 672px;
+      height: 677px;
       object-fit: cover;
     }
     .content-container {
       padding: 80px;
-      top: 200px;
-      left: 564px;
-      width: 54.38%;
-      height: 672px;
-      border-radius: 80px 80px 0px 80px;
-      border-bottom: 1px solid var(--Neutral-0, #fff);
-      border-left: 1px solid var(--Neutral-0, #fff);
-      background: linear-gradient(180deg, rgba(20, 15, 10, 0.8) 0%, rgba(190, 156, 124, 0.8) 100%);
-      backdrop-filter: blur(10px);
+      bottom: 120px;
+      right: 312px;
+      width: 628px;
+      height: 418px; 
       .title-container {
         .title {
           @include customTextStyle(48px, 57.6px, 700);
